@@ -22,10 +22,6 @@ const aadharSchema = new mongoose.Schema({
         required: [true, "Must for creating aadhar"],
         unique:true
     },
-    password: {
-        type: String,
-        required: [true, "Required Password for creatinng"]
-    },
     address: {
         type: String,
         required: [true, "Required address for creating aadhar"]
@@ -37,7 +33,9 @@ const aadharSchema = new mongoose.Schema({
         type: Number,
         required: true,
         unique:true
-    }
+    },
+    dateOfBirth:{type:String,required:true},
+    gender:{type:String,required:true}
 })
 const aadharModel =
     mongoose.model("aadhar", aadharSchema);
